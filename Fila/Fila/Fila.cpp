@@ -59,7 +59,7 @@ void menu()
 void inicializar()
 {
 
-	// se a lista j· possuir elementos
+	// se a lista j√° possuir elementos
 	// libera a memoria ocupada
 	NO* aux = inicio;
 	while (aux != NULL) {
@@ -90,8 +90,8 @@ void insere()
 
 	if (inicio == NULL)
 	{
-		fim = novo;
 		inicio = novo;
+		fim = novo;
 		return;
 	}
 
@@ -103,14 +103,13 @@ void remove()
 {
 	if (inicio == NULL)
 	{
-		cout << "Fila vazia! " << endl;
+		cout << "Fila vazia!" << endl;
 		return;
 	}
 
 	NO* aux = inicio;
 	inicio = inicio->prox;
-
-	cout << "Elemento deletado: " << aux->valor << endl;
+	
+	cout << "Primeiro elemento da fila (" << aux->valor << ") deletado!" << endl;
 	free(aux);
 }
-
